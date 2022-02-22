@@ -122,14 +122,67 @@ console.log(emptyArray);
 //objects in Js
 //dictionaries in Python
 
-let obj = { one: 'ho', two: 'ney', number: 34 };
+let obj = {
+    one: 'ho',
+    two: 'ney',
+    number: 34,
+    studentInfo: function () {
+        return this.one + '\n' + this.two + "\n" + this.number;
+    }
+};
 // console.log(obj.one);
 // console.log(obj.two);
 obj.one = 'Mo'; // change value
-console.log(obj.one);
-console.log(obj.two);
+// console.log(obj.one);
+// console.log(obj.two);
 
-obj.number++;
-console.log(obj.number);
+// obj.number++;
+// console.log(obj.number);
+console.log(obj.studentInfo());
 
+
+//             https://youtu.be/Qqx_wzMmFeA?t=4703           1:18:23
+
+
+// Conditionals, Control flows (if else)
+// && AND
+// || OR
+
+// var k = prompt('What is your age?');
+
+// if ((k >= 20) && (k <= 36)) {
+//     statuss = 'Access is granted';
+//     console.log(statuss);
+// } else {
+//     statuss = 'Access is denied';
+//     console.log(statuss);
+// }
+
+//Switch statements
+// differentiate between weekday vs. weekend
+// day 0 --> Sunday --> weekend
+// day 1 --> Monday --> weekday
+// day 2 --> Tuesday --> weekday
+// day 3 --> Wednesday --> weekday
+// day 4 --> Thursday --> weekday
+// day 5 --> Friday --> weekday
+// day 6 --> Saturday --> weekend
+
+switch (6) {
+    case 0:
+        text = 'weekend';
+        break;
+    case 6:
+        text = 'weekend';
+        break;
+    default:
+        text = 'weekday';
+
+}
+console.log(text);
+
+
+// 1:31:18 / 7:57:27
+
+//         https://youtu.be/Qqx_wzMmFeA?t=5478
 
