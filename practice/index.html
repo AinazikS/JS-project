@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        let connection = `[
+            {
+                "name": "Device1",
+                "model": 9,
+                "release_date": 2021
+            },
+            {
+                "name": "Device2",
+                "model": 12,
+                "release_date": 2022
+            }
+        ]`
+        console.log(JSON.parse(connection)[1].release_date);
+    </script>
+</body>
+
+</html>
