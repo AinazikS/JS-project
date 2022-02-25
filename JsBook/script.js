@@ -74,6 +74,8 @@ undefined + 1 = NaN
 
 */
 
+
+
 <script>
 "use strict";
 
@@ -86,29 +88,80 @@ alert(+a + +b); // 12
 
 
 
-// "use strict";
-
-// let jsName = prompt("Какое «официальное» название JavaScript? ", "");
-// (jsName == "ECMAScript")? alert("Верно!"):
-// alert("Не знаете? ECMAScript!");
-
-// let num = prompt("Enter the number:", 0);
-// if (num > 0) {
-//     alert("1");
-// } else if (num < 0){
-//     alert("-1");
-// } else if (num == 0){
-//     alert("0");
-// }
 
 
-// let a = 1;
-// let b = 3;
-// (a + b <= 4) ? console.log("Мало") : console.log("Много");
+"use strict";
 
-// let message = (login == 'Сотрудник') ?'Привет':
-// (login == 'Директор')? 'Здравствуйте':
-// (login == '') ?'Нет логина':'';
+let jsName = prompt("Какое «официальное» название JavaScript? ", "");
+(jsName == "ECMAScript")? alert("Верно!"):
+alert("Не знаете? ECMAScript!");
+
+let num = prompt("Enter the number:", 0);
+if (num > 0) {
+    alert("1");
+} else if (num < 0){
+    alert("-1");
+} else if (num == 0){
+    alert("0");
+}
+
+
+
+
+
+
+let a = 1;
+let b = 3;
+(a + b <= 4) ? console.log("Мало") : console.log("Много");
+
+let message = (login == 'Сотрудник') ?'Привет':
+(login == 'Директор')? 'Здравствуйте':
+(login == '') ?'Нет логина':'';
+
+
+
+
+if (!(age >= 14 || age <= 90) );
+if (age < 14 || age > 90);
+
+if (age >= 14 && age <= 90)
+
+
+
+  
+  
+
+let login = prompt("Who is this? " , "" );
+let pswd;
+
+(login == "Admin")? pswd = prompt("Enter the password: " , "" ):
+(login == null)? alert("Denied"):
+alert("I don`t know you");
+
+(pswd == "I`m in charge")? alert("Hello!"):
+(pswd == null)? alert("Denied"):
+alert("Wrong password");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
