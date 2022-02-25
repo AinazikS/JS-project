@@ -86,6 +86,46 @@ alert(+a + +b); // 12
 
 
 
+// "use strict";
+
+// let jsName = prompt("Какое «официальное» название JavaScript? ", "");
+// (jsName == "ECMAScript")? alert("Верно!"):
+// alert("Не знаете? ECMAScript!");
+
+// let num = prompt("Enter the number:", 0);
+// if (num > 0) {
+//     alert("1");
+// } else if (num < 0){
+//     alert("-1");
+// } else if (num == 0){
+//     alert("0");
+// }
+
+
+// let a = 1;
+// let b = 3;
+// (a + b <= 4) ? console.log("Мало") : console.log("Много");
+
+// let message = (login == 'Сотрудник') ?'Привет':
+// (login == 'Директор')? 'Здравствуйте':
+// (login == '') ?'Нет логина':'';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
