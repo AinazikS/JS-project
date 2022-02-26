@@ -219,6 +219,8 @@ do {
 num = prompt("Введите число больше 100?", 0);
 } while (num <= 100 && num);
 
+
+//MY VERSION
 let n = 10;
 hello: 
 for (let j = 2; j <= n; j++) {
@@ -229,6 +231,17 @@ for (let j = 2; j <= n; j++) {
 }
 
 
+
+//BOOK`S VERSION
+const mainNum = 450;
+
+label:
+for (let first = 2; first <= mainNum; first++) {
+  for (let second = 2; second < first; second++) {
+    if (first % second == 0) continue label;
+  }
+  console.log(`The result is ${first}`);
+}
 
 
 /*
