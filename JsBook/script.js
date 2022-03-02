@@ -279,17 +279,22 @@ for (let first = 2; first <= mainNum; first++) {
 //     alert( 'We hope that this page looks ok!' );
 // }
 
-// let browser = prompt("", "");
-// if(browser=="Edge") {
-//   alert( "You've got the Edge!" );
-// } else if (browser == 'Chrome'
-// ||'Firefox'
-// || 'Safari'
-// || 'Opera') {
-//   alert( 'Okay we support these browser too' );
-// } else {
-//   alert( 'We hope that this page looks ok!' );
-// }
+
+
+let browser = prompt("", "");
+if(browser=="Edge") {
+  alert( "You've got the Edge!" );
+} else if (browser == 'Chrome'
+||browser=='Firefox'
+||browser== 'Safari'
+||browser== 'Opera') {
+  alert( 'Okay we support these browser too' );
+} else {
+  alert( 'We hope that this page looks ok!' );
+}
+
+
+
 
 const number = +prompt("Введите число между 0 и 3", "");
 
