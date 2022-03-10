@@ -1,1 +1,194 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac Man</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="labyrinth">
+        <input type="radio" name="s" id="s_w_7" hidden>
+
+        <!-- Horizontal lines -->
+        <div class="w l1 wf"></div>
+        <div class="w l2 c2 w1"></div>
+        <div class="w l2 c4 w4"></div>
+        <div class="w l3 c1 w1"></div>
+        <div class="w l3 c5 w5"></div>
+        <div class="w l4 c2 w3"></div>
+        <div class="w l4 c6 w2"></div>
+        <div class="w l5 c2 w5"></div>
+        <div class="w l6 c1 w1"></div>
+        <div class="w l7 c3 w5"></div>
+        <div class="w l8 c1 w1"></div>
+        <div class="w l9 c3 w4"></div>
+        <div class="w l9 c8 w1"></div>
+        <div class="w l10 c3 w3"></div>
+        <div class="w l11 c2 w4"></div>
+        <div class="w l12 c3 w4"></div>
+        <div class="w l13 wf"></div>
+
+        <!-- Vertical lines -->
+        <div class="w l1 h6"></div>
+        <div class="w l8 h5"></div>
+        <div class="w c2 l4 h1"></div>
+        <div class="w c2 l8 h1"></div>
+        <div class="w c2 l11 h2"></div>
+        <div class="w c3 l2 h2"></div>
+        <div class="w c3 l9 h1"></div>
+        <div class="w c4 l2 h1"></div>
+        <div class="w c5 l3 h1"></div>
+        <div class="w c6 l4 h1"></div>
+        <div class="w c7 l7 h4"></div>
+        <div class="w c8 l2 h1"></div>
+        <div class="w c8 l4 h3"></div>
+        <div class="w c8 l9 h4"></div>
+        <div class="w c9 l1 h1"></div>
+        <div class="w c9 l3 h5"></div>
+        <div class="w c9 l10 h3"></div>
+        <div class="w c10 l2 h9"></div>
+        <div class="w c11 l1 hf"></div>
+
+        <!-- Logic part -->
+
+
+        <input type="radio" name="s" id="s_1_1" hidden>
+        <input type="radio" name="s" id="s_1_2" hidden>
+        <input type="radio" name="s" id="s_1_3" hidden>
+        <input type="radio" name="s" id="s_1_4" hidden>
+        <input type="radio" name="s" id="s_1_5" hidden>
+        <input type="radio" name="s" id="s_1_6" hidden>
+        <input type="radio" name="s" id="s_1_7" hidden>
+        <input type="radio" name="s" id="s_1_8" hidden>
+        <input type="radio" name="s" id="s_1_9" hidden>
+        <input type="radio" name="s" id="s_1_10" hidden>
+        <input type="radio" name="s" id="s_1_11" hidden>
+        <input type="radio" name="s" id="s_1_12" hidden>
+
+        <input type="radio" name="s" id="s_2_1" hidden>
+        <input type="radio" name="s" id="s_2_2" hidden>
+        <input type="radio" name="s" id="s_2_3" hidden>
+        <input type="radio" name="s" id="s_2_4" hidden>
+        <input type="radio" name="s" id="s_2_5" hidden>
+        <input type="radio" name="s" id="s_2_6" hidden>
+        <input type="radio" name="s" id="s_2_7" hidden>
+        <input type="radio" name="s" id="s_2_8" hidden>
+        <input type="radio" name="s" id="s_2_9" hidden>
+        <input type="radio" name="s" id="s_2_10" hidden>
+        <input type="radio" name="s" id="s_2_11" hidden>
+        <input type="radio" name="s" id="s_2_12" hidden>
+
+        <input type="radio" name="s" id="s_3_1" hidden>
+        <input type="radio" name="s" id="s_3_2" hidden>
+        <input type="radio" name="s" id="s_3_3" hidden>
+        <input type="radio" name="s" id="s_3_4" hidden>
+        <input type="radio" name="s" id="s_3_5" hidden>
+        <input type="radio" name="s" id="s_3_6" hidden>
+        <input type="radio" name="s" id="s_3_7" hidden>
+        <input type="radio" name="s" id="s_3_8" hidden>
+        <input type="radio" name="s" id="s_3_9" hidden>
+        <input type="radio" name="s" id="s_3_10" hidden>
+        <input type="radio" name="s" id="s_3_11" hidden>
+        <input type="radio" name="s" id="s_3_12" hidden>
+
+        <input type="radio" name="s" id="s_4_1" hidden>
+        <input type="radio" name="s" id="s_4_2" hidden>
+        <input type="radio" name="s" id="s_4_3" hidden>
+        <input type="radio" name="s" id="s_4_4" hidden>
+        <input type="radio" name="s" id="s_4_5" hidden>
+        <input type="radio" name="s" id="s_4_6" hidden>
+        <input type="radio" name="s" id="s_4_7" hidden>
+        <input type="radio" name="s" id="s_4_8" hidden>
+        <input type="radio" name="s" id="s_4_9" hidden>
+        <input type="radio" name="s" id="s_4_10" hidden>
+        <input type="radio" name="s" id="s_4_11" hidden>
+        <input type="radio" name="s" id="s_4_12" hidden>
+
+        <input type="radio" name="s" id="s_5_1" hidden>
+        <input type="radio" name="s" id="s_5_2" hidden>
+        <input type="radio" name="s" id="s_5_3" hidden>
+        <input type="radio" name="s" id="s_5_4" hidden>
+        <input type="radio" name="s" id="s_5_5" hidden>
+        <input type="radio" name="s" id="s_5_6" hidden>
+        <input type="radio" name="s" id="s_5_7" hidden>
+        <input type="radio" name="s" id="s_5_8" hidden>
+        <input type="radio" name="s" id="s_5_9" hidden>
+        <input type="radio" name="s" id="s_5_10" hidden>
+        <input type="radio" name="s" id="s_5_11" hidden>
+        <input type="radio" name="s" id="s_5_12" hidden>
+
+        <input type="radio" name="s" id="s_6_1" hidden>
+        <input type="radio" name="s" id="s_6_2" hidden>
+        <input type="radio" name="s" id="s_6_3" hidden>
+        <input type="radio" name="s" id="s_6_4" hidden>
+        <input type="radio" name="s" id="s_6_5" hidden>
+        <input type="radio" name="s" id="s_6_6" hidden>
+        <input type="radio" name="s" id="s_6_7" hidden>
+        <input type="radio" name="s" id="s_6_8" hidden>
+        <input type="radio" name="s" id="s_6_9" hidden>
+        <input type="radio" name="s" id="s_6_10" hidden>
+        <input type="radio" name="s" id="s_6_11" hidden>
+        <input type="radio" name="s" id="s_6_12" hidden>
+
+        <input type="radio" name="s" id="s_7_1" hidden>
+        <input type="radio" name="s" id="s_7_2" hidden>
+        <input type="radio" name="s" id="s_7_3" hidden>
+        <input type="radio" name="s" id="s_7_4" hidden>
+        <input type="radio" name="s" id="s_7_5" hidden>
+        <input type="radio" name="s" id="s_7_6" hidden>
+        <input type="radio" name="s" id="s_7_7" hidden>
+        <input type="radio" name="s" id="s_7_8" hidden>
+        <input type="radio" name="s" id="s_7_9" hidden>
+        <input type="radio" name="s" id="s_7_10" hidden>
+        <input type="radio" name="s" id="s_7_11" hidden>
+        <input type="radio" name="s" id="s_7_12" hidden>
+
+        <input type="radio" name="s" id="s_8_1" hidden>
+        <input type="radio" name="s" id="s_8_2" hidden>
+        <input type="radio" name="s" id="s_8_3" hidden>
+        <input type="radio" name="s" id="s_8_4" hidden>
+        <input type="radio" name="s" id="s_8_5" hidden>
+        <input type="radio" name="s" id="s_8_6" hidden>
+        <input type="radio" name="s" id="s_8_7" hidden>
+        <input type="radio" name="s" id="s_8_8" hidden>
+        <input type="radio" name="s" id="s_8_9" hidden>
+        <input type="radio" name="s" id="s_8_10" hidden>
+        <input type="radio" name="s" id="s_8_11" hidden>
+        <input type="radio" name="s" id="s_8_12" hidden>
+
+        <input type="radio" name="s" id="s_9_1" hidden>
+        <input type="radio" name="s" id="s_9_2" hidden>
+        <input type="radio" name="s" id="s_9_3" checked hidden>
+        <input type="radio" name="s" id="s_9_4" hidden>
+        <input type="radio" name="s" id="s_9_5" hidden>
+        <input type="radio" name="s" id="s_9_6" hidden>
+        <input type="radio" name="s" id="s_9_7" hidden>
+        <input type="radio" name="s" id="s_9_8" hidden>
+        <input type="radio" name="s" id="s_9_9" hidden>
+        <input type="radio" name="s" id="s_9_10" hidden>
+        <input type="radio" name="s" id="s_9_11" hidden>
+        <input type="radio" name="s" id="s_9_12" hidden>
+
+        <input type="radio" name="s" id="s_10_1" hidden>
+        <input type="radio" name="s" id="s_10_2" hidden>
+        <input type="radio" name="s" id="s_10_3" hidden>
+        <input type="radio" name="s" id="s_10_4" hidden>
+        <input type="radio" name="s" id="s_10_5" hidden>
+        <input type="radio" name="s" id="s_10_6" hidden>
+        <input type="radio" name="s" id="s_10_7" hidden>
+        <input type="radio" name="s" id="s_10_8" hidden>
+        <input type="radio" name="s" id="s_10_9" hidden>
+        <input type="radio" name="s" id="s_10_10" hidden>
+        <input type="radio" name="s" id="s_10_11" hidden>
+        <input type="radio" name="s" id="s_10_12" hidden>
+
+        <div id="boy"></div>
+
+        <div id="congratulation">Congratulation, you won!</div>
+    </div>
+</body>
+</html>
