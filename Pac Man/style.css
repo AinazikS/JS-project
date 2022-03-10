@@ -1,1 +1,317 @@
+/* ---=== Structure style ===--- */
 
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+#labyrinth{
+	position: relative;
+	height: 300px;
+	width: 260px;
+	margin: 10% auto 0;
+}
+
+.w{
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: #C1C2C9;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #dbdce2 34%, #b8bac6 49%, #dddfe3 66%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(34%,#dbdce2), color-stop(49%,#b8bac6), color-stop(66%,#dddfe3), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#dbdce2 34%,#b8bac6 49%,#dddfe3 66%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#dbdce2 34%,#b8bac6 49%,#dddfe3 66%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#dbdce2 34%,#b8bac6 49%,#dddfe3 66%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#dbdce2 34%,#b8bac6 49%,#dddfe3 66%,#ffffff 100%);
+}
+
+.l1{ top: 0; }
+.l2{ top: 27px; }
+.l3{ top: 51px; }
+.l4{ top: 75px; }
+.l5{ top: 99px; }
+.l6{ top: 123px; }
+.l7{ top: 147px; }
+.l8{ top: 171px; }
+.l9{ top: 195px; }
+.l10{ top: 219px; }
+.l11{ top: 243px; }
+.l12{ top: 267px; }
+.l13{ top: 291px; }
+
+.c1{ left: 0; }
+.c2{ left: 25px; }
+.c3{ left: 49px; }
+.c4{ left: 73px; }
+.c5{ left: 105px; }
+.c6{ left: 128px; }
+.c7{ left: 152px; }
+.c8{ left: 176px; }
+.c9{ left: 202px; }
+.c10{ left: 228px; }
+.c11{ left: 251px; }
+
+.wf{ width: 100%; }
+.w1{ width: 33px; }
+.w2{ width: 54px; }
+.w3{ width: 89px; }
+.w4{ width: 112px; }
+.w5{ width: 132px; }
+
+.hf{ height: 100%; }
+.h1{ height: 27px; }
+.h2{ height: 51px; }
+.h3{ height: 81px; }
+.h4{ height: 105px; }
+.h5{ height: 123px; }
+.h6{ height: 155px; }
+.h9{ height: 219px; }
+
+#boy{
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	background: #bfd255;
+	background: -moz-linear-gradient(top,  #bfd255 0%, #8eb92a 50%, #72aa00 51%, #9ecb2d 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bfd255), color-stop(50%,#8eb92a), color-stop(51%,#72aa00), color-stop(100%,#9ecb2d));
+	background: -webkit-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+	background: -o-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+	background: -ms-linear-gradient(top,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+	background: linear-gradient(to bottom,  #bfd255 0%,#8eb92a 50%,#72aa00 51%,#9ecb2d 100%);
+}
+
+/* ---=== Label layout ===--- */
+
+label{
+	display: none;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 355px;
+	cursor: pointer;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #eee;
+	background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+	background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+	background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+	background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+	background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+label:active{
+	background: #ccc;
+	background: -moz-linear-gradient(top,  #cccccc 0%, #eeeeee 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#eeeeee));
+	background: -webkit-linear-gradient(top,  #cccccc 0%,#eeeeee 100%);
+	background: -o-linear-gradient(top,  #cccccc 0%,#eeeeee 100%);
+	background: -ms-linear-gradient(top,  #cccccc 0%,#eeeeee 100%);
+	background: linear-gradient(to bottom,  #cccccc 0%,#eeeeee 100%);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7) inset;
+	-moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7) inset;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7) inset;
+}
+
+label:before{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #000;
+	font-size: 40px;
+	text-align: center;
+	line-height: 1;
+}
+
+label.t{
+	top: 310px;
+	left: 110px;
+}
+
+label.l{ left: 65px; }
+label.r{ left: 155px; }
+label.b{ left: 110px; }
+label.t:before{ content: "\2191"; }
+label.l:before{	content: "\2190"; }
+label.r:before{	content: "\2192"; }
+label.b:before{ content: "\2193"; }
+
+/* ---=== Horizontal step ===--- */
+input[id^="s_1"]:checked ~ #boy{ left: 10px; }
+input[id^="s_2"]:checked ~ #boy{ left: 35px; }
+input[id^="s_3"]:checked ~ #boy{ left: 59px; }
+input[id^="s_4"]:checked ~ #boy{ left: 91px; }
+input[id^="s_5"]:checked ~ #boy{ left: 116px; }
+input[id^="s_6"]:checked ~ #boy{ left: 138px; }
+input[id^="s_7"]:checked ~ #boy{ left: 162px; }
+input[id^="s_8"]:checked ~ #boy{ left: 187px; }
+input[id^="s_9"]:checked ~ #boy{ left: 213px; }
+input[id^="s_10"]:checked ~ #boy{ left: 238px; }
+
+/* ---=== Vertical step ===--- */
+input[id$="1"]:checked ~ #boy{ top: 11px; }
+input[id$="2"]:checked ~ #boy{ top: 37px; }
+input[id$="3"]:checked ~ #boy{ top: 61px; }
+input[id$="4"]:checked ~ #boy{ top: 85px; }
+input[id$="5"]:checked ~ #boy{ top: 109px; }
+input[id$="6"]:checked ~ #boy{ top: 133px; }
+input[id$="7"]:checked ~ #boy{ top: 157px; }
+input[id$="8"]:checked ~ #boy{ top: 181px; }
+input[id$="9"]:checked ~ #boy{ top: 205px; }
+input[id$="10"]:checked ~ #boy{ top: 228px; }
+input[id$="11"]:checked ~ #boy{ top: 254px; }
+input[id$="12"]:checked ~ #boy{ top: 277px; }
+
+/* ---=== No step ===--- */
+label[for$="f"]:active ~ #boy{
+	background: red;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;
+}
+
+label[for$="f"]:active ~ #boy:after{
+	background: #FFF;
+	display: block;
+	content: '';
+	width: 7px;
+	height: 3px;
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+
+/* ---=== Last step ===--- */
+input[id^="s_w"]:checked ~ #boy{
+	left: -20px;
+}
+
+input[id^="s_w"]:checked ~ #congratulation{
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 30px;
+	color: #FFF;
+	text-align: center;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 90px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#congratulation{
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+/* ---=== Controls ===--- */
+input#s_1_1:checked ~, input#s_2_1:checked ~label[rel="p-2-1"],
+input#s_3_1:checked ~, input#s_4_1:checked ~label[rel="p-4-1"],
+input#s_5_1:checked ~, input#s_6_1:checked ~label[rel="p-6-1"],
+input#s_6_1:checked ~, input#s_7_1:checked ~label[rel="p-7-1"],
+input#s_7_1:checked ~, input#s_8_1:checked ~label[rel="p-8-1"],
+input#s_8_1:checked ~, input#s_9_1:checked ~label[rel="p-9-1"],
+input#s_9_1:checked ~, input#s_10_1:checked ~label[rel="p-10-1"],
+input#s_1_2:checked ~, input#s_2_2:checked ~label[rel="p-2-2"],
+input#s_3_2:checked ~, input#s_4_2:checked ~label[rel="p-4-2"],
+input#s_5_2:checked ~, input#s_6_2:checked ~label[rel="p-6-2"],
+input#s_6_2:checked ~, input#s_7_2:checked ~label[rel="p-7-2"],
+input#s_7_2:checked ~, input#s_8_2:checked ~label[rel="p-8-2"],
+input#s_8_2:checked ~, input#s_9_2:checked ~label[rel="p-9-2"],
+input#s_9_2:checked ~, input#s_10_2:checked ~label[rel="p-10-2"],
+input#s_1_3:checked ~, input#s_2_3:checked ~label[rel="p-2-3"],
+input#s_3_3:checked ~, input#s_4_3:checked ~label[rel="p-4-3"],
+input#s_5_3:checked ~, input#s_6_3:checked ~label[rel="p-6-3"],
+input#s_6_3:checked ~, input#s_7_3:checked ~label[rel="p-7-3"],
+input#s_7_3:checked ~, input#s_8_3:checked ~label[rel="p-8-3"],
+input#s_8_3:checked ~, input#s_9_3:checked ~label[rel="p-9-3"],
+input#s_9_3:checked ~, input#s_10_3:checked ~label[rel="p-10-3"],
+input#s_1_4:checked ~, input#s_2_4:checked ~label[rel="p-2-4"],
+input#s_3_4:checked ~, input#s_4_4:checked ~label[rel="p-4-4"],
+input#s_5_4:checked ~, input#s_6_4:checked ~label[rel="p-6-4"],
+input#s_6_4:checked ~, input#s_7_4:checked ~label[rel="p-7-4"],
+input#s_7_4:checked ~, input#s_8_4:checked ~label[rel="p-8-4"],
+input#s_8_4:checked ~, input#s_9_4:checked ~label[rel="p-9-4"],
+input#s_9_4:checked ~, input#s_10_4:checked ~label[rel="p-10-4"],
+input#s_1_5:checked ~, input#s_2_5:checked ~label[rel="p-2-5"],
+input#s_3_5:checked ~, input#s_4_5:checked ~label[rel="p-4-5"],
+input#s_5_5:checked ~, input#s_6_5:checked ~label[rel="p-6-5"],
+input#s_6_5:checked ~, input#s_7_5:checked ~label[rel="p-7-5"],
+input#s_7_5:checked ~, input#s_8_5:checked ~label[rel="p-8-5"],
+input#s_8_5:checked ~, input#s_9_5:checked ~label[rel="p-9-5"],
+input#s_9_5:checked ~, input#s_10_5:checked ~label[rel="p-10-5"],
+input#s_1_6:checked ~, input#s_2_6:checked ~label[rel="p-2-6"],
+input#s_3_6:checked ~, input#s_4_6:checked ~label[rel="p-4-6"],
+input#s_5_6:checked ~, input#s_6_6:checked ~label[rel="p-6-6"],
+input#s_6_6:checked ~, input#s_7_6:checked ~label[rel="p-7-6"],
+input#s_7_6:checked ~, input#s_8_6:checked ~label[rel="p-8-6"],
+input#s_8_6:checked ~, input#s_9_6:checked ~label[rel="p-9-6"],
+input#s_9_6:checked ~, input#s_10_6:checked ~label[rel="p-10-6"],
+input#s_1_7:checked ~, input#s_2_7:checked ~label[rel="p-2-7"],
+input#s_3_7:checked ~, input#s_4_7:checked ~label[rel="p-4-7"],
+input#s_5_7:checked ~, input#s_6_7:checked ~label[rel="p-6-7"],
+input#s_6_7:checked ~, input#s_7_7:checked ~label[rel="p-7-7"],
+input#s_7_7:checked ~, input#s_8_7:checked ~label[rel="p-8-7"],
+input#s_8_7:checked ~, input#s_9_7:checked ~label[rel="p-9-7"],
+input#s_9_7:checked ~, input#s_10_7:checked ~label[rel="p-10-7"],
+input#s_1_8:checked ~, input#s_2_8:checked ~label[rel="p-2-8"],
+input#s_3_8:checked ~, input#s_4_8:checked ~label[rel="p-4-8"],
+input#s_5_8:checked ~, input#s_6_8:checked ~label[rel="p-6-8"],
+input#s_6_8:checked ~, input#s_7_8:checked ~label[rel="p-7-8"],
+input#s_7_8:checked ~, input#s_8_8:checked ~label[rel="p-8-8"],
+input#s_8_8:checked ~, input#s_9_8:checked ~label[rel="p-9-8"],
+input#s_9_8:checked ~, input#s_10_8:checked ~label[rel="p-10-8"],
+input#s_1_9:checked ~, input#s_2_9:checked ~label[rel="p-2-9"],
+input#s_3_9:checked ~, input#s_4_9:checked ~label[rel="p-4-9"],
+input#s_5_9:checked ~, input#s_6_9:checked ~label[rel="p-6-9"],
+input#s_6_9:checked ~, input#s_7_9:checked ~label[rel="p-7-9"],
+input#s_7_9:checked ~, input#s_8_9:checked ~label[rel="p-8-9"],
+input#s_8_9:checked ~, input#s_9_9:checked ~label[rel="p-9-9"],
+input#s_9_9:checked ~, input#s_10_9:checked ~label[rel="p-10-9"],
+input#s_1_10:checked ~, input#s_2_10:checked ~label[rel="p-2-10"],
+input#s_3_10:checked ~, input#s_4_10:checked ~label[rel="p-4-10"],
+input#s_5_10:checked ~, input#s_6_10:checked ~label[rel="p-6-10"],
+input#s_6_10:checked ~, input#s_7_10:checked ~label[rel="p-7-10"],
+input#s_7_10:checked ~, input#s_8_10:checked ~label[rel="p-8-10"],
+input#s_8_10:checked ~, input#s_9_10:checked ~label[rel="p-9-10"],
+input#s_9_10:checked ~, input#s_10_10:checked ~label[rel="p-10-10"],
+input#s_1_11:checked ~, input#s_2_11:checked ~label[rel="p-2-11"],
+input#s_3_11:checked ~, input#s_4_11:checked ~label[rel="p-4-11"],
+input#s_5_11:checked ~, input#s_6_11:checked ~label[rel="p-6-11"],
+input#s_6_11:checked ~, input#s_7_11:checked ~label[rel="p-7-11"],
+input#s_7_11:checked ~, input#s_8_11:checked ~label[rel="p-8-11"],
+input#s_8_11:checked ~, input#s_9_11:checked ~label[rel="p-9-11"],
+input#s_9_11:checked ~, input#s_10_11:checked ~label[rel="p-10-11"],
+input#s_1_12:checked ~, input#s_2_12:checked ~label[rel="p-2-12"],
+input#s_9_12:checked ~, input#s_10_12:checked ~label[rel="p-10-12"]
+input#s_3_12:checked ~, input#s_4_12:checked ~label[rel="p-4-12"],
+input#s_5_12:checked ~, input#s_6_12:checked ~label[rel="p-6-12"],
+input#s_6_12:checked ~, input#s_7_12:checked ~label[rel="p-7-12"],
+input#s_7_12:checked ~, input#s_8_12:checked ~label[rel="p-8-12"],
+input#s_8_12:checked ~, input#s_9_12:checked ~label[rel="p-9-12"],
+*{
+	display: block;
+}
